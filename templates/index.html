@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Au Register Forms by Colorlib</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">Avalanche Forecasting</h2>
+                    <form action="{{ url_for('y_predict')}}" method="post">
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">MaxTempF</label>
+                                    <input type="text" name="MaxTempF"  class="input--style-4" />
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">10mWindSpeedMax</label>
+                                    <input class="input--style-4" type="text"  name="10mWindSpeedMax" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">snowDepthIn</label>
+                                    <input type="text" name="snowDepthIn"  class="input--style-4" />
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">tempMinF</label>
+                                    <input class="input--style-4" type="text"  name="tempMinF" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">10mWindSpeed</label>
+                                    <input type="text" name="10mWindSpeed"  class="input--style-4" />
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">APCPsurface</label>
+                                    <input class="input--style-4" type="text"  name="APCPsurface" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">precipIncrementSnowIn</label>
+                                    <input type="text" name="precipIncrementSnowIn"  class="input--style-4" />
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Prev3daySnowAccumulation</label>
+                                    <input class="input--style-4" type="text"  name="Prev3daySnowAccumulation" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Prev7daySnowAccumulation</label>
+                                    <input type="text" name="Prev7daySnowAccumulation"  class="input--style-4" />
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Prev3dayMaxTemp</label>
+                                    <input class="input--style-4" type="text"  name="Prev3dayMaxTemp" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Prev3DayMax10mWind</label>
+                                    <input type="text" name="Prev3DayMax10mWind"  class="input--style-4" />
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Prev3dayMinTemp</label>
+                                    <input class="input--style-4" type="text"  name="Prev3dayMinTemp" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Prev7dayMaxTemp</label>
+                                    <input type="text" name="Prev7dayMaxTemp"  class="input--style-4" />
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Prev7DayMax10mWind</label>
+                                    <input class="input--style-4" type="text"  name="Prev7DayMax10mWind" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Prev7dayMinTemp</label>
+                                    <input type="text" name="Prev7dayMinTemp"  class="input--style-4" />
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Prev1dayMaxTemp</label>
+                                    <input class="input--style-4" type="text"  name="Prev1dayMaxTemp" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Prev1DayMax10mWind</label>
+                                    <input type="text" name="Prev1DayMax10mWind"  class="input--style-4" />
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Prev1dayMinTemp</label>
+                                    <input class="input--style-4" type="text"  name="Prev1dayMinTemp" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Prev1DayPrecip</label>
+                                    <input type="text" name="Prev1DayPrecip"  class="input--style-4" />
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Prev3DayFreezeThawLikeliness</label>
+                                    <input class="input--style-4" type="text"  name="Prev3DayFreezeThawLikeliness" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Prev7DayFreezeThawLikeliness</label>
+                                    <input type="text" name="Prev7DayFreezeThawLikeliness"  class="input--style-4" />
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Prev3DayWindSlabLikeliness</label>
+                                    <input class="input--style-4" type="text"  name="Prev3DayWindSlabLikeliness" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Prev7DayWindSlabLikeliness</label>
+                                    <input type="text" name="Prev7DayWindSlabLikeliness"  class="input--style-4" />
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">LongTermColdTemps</label>
+                                    <input class="input--style-4" type="text"  name="LongTermColdTemps" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Prev24HoursPrecipAsRainTotalIn</label>
+                                    <input type="text" name="Prev24HoursPrecipAsRainTotalIn"  class="input--style-4" />
+                                </div>
+                            </div>
+                            <div class="col-2">
+                               <div class="input-group">
+                                    <label class="label">SNOWDAS_SWE_mm</label>
+                                    <input type="text" name="SNOWDAS_SWE_mm"  class="input--style-4" />
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">SNOWDAS_SnowmeltRunoff_micromm</label>
+                                    <input class="input--style-4" type="text"  name="SNOWDAS_SnowmeltRunoff_micromm" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">SNOWDAS_Sublimation_micromm</label>
+                                    <input type="text" name="SNOWDAS_Sublimation_micromm"  class="input--style-4" />
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">SNOWDAS_SolidPrecip_kg/sqrm</label>
+                                    <input class="input--style-4" type="text"  name="SSNOWDAS_SolidPrecip_kg/sqrm" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">SNOWDAS_LiquidPrecip_kg/sqrm</label>
+                                    <input type="text" name="SNOWDAS_LiquidPrecip_kg/sqrm"  class="input--style-4" />
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">SNOWDAS_SnowpackAveTemp_k</label>
+                                    <input class="input--style-4" type="text"  name="SNOWDAS_SnowpackAveTemp_k" required="required" >
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
+                        </div>
+                    </form>
+                    <br>
+                    <br>
+                    {{ prediction_text }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
